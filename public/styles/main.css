@@ -1,16 +1,79 @@
 .center {
-    margin-right: auto; margin-left: auto; width: 100px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px
+  }
+.centerediv {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+.centerediv2 {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    transform: translate(0px, 150px);
+}
+  
+  .center2 {
+    margin-right: auto;
+    
+     width: 100px;
+     height:100px;
+  }
+
+  .centerindiv {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; 
+  }
+
+  .centerindiv2 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px; 
+  }
+
+  .centerindiv3 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px; 
   }
 
   body {background-color: #7BAFD4;
-    margin: 0; padding: 0;
+    
 }
 
   #circle {
-    width: 50px;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: white;
+  }
+  #circle2 {
+    width: 200px;
     height: 50px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    background: red;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: white;
+  }
+  #circle3 {
+    width: 150px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: lightgray;
   }
