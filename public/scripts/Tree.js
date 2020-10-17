@@ -8,7 +8,7 @@ class FamilyTree {
     }
 
     addPerson(person) {
-        this.tree.append(person);
+        this.tree.push(person);
     }
 
     exportTree() {
@@ -24,10 +24,22 @@ class FamilyTree {
     }
 
     static importTree(arr, tid) {
-        let ft = new FamilyTree(tid);
-        pids = arr.map( p => p[0])
-        people = pids.map( pid => new Person(pid))
-        
+        let tree = new FamilyTree(tid);
+        let pids = arr.map( p => p[0]);
+        let people = pids.map( pid => new Person(pid));
+        people.forEach( person => {
+            arr[i][1].map( parent_pid => {
+                let parent_index = pids.findIndex(parent_pid)
+                person.addParent(people[parent_index])
+            })
+            arr[i][2].map( child_pid => {
+                let child_index = pids.findIndex(child_pid)
+                person.addChild(people[child_index])
+            })
+            arr[i][3].forEach( condition => person.addCondition(condition));
+        });
+        people.forEach( person => tree.addPerson(person))
+        return tree;
     }
 }
 
@@ -42,10 +54,14 @@ class Person {
     }
 
     addParent(person) {
-        this.parents.append(person);
+        this.parents.push(person);
     }
 
     addChild(person) {
-        this.children.append(person);
+        this.children.push(person);
+    }
+    
+    addCondition(condition) {
+        this.conditions.push(condition);
     }
 }
