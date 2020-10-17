@@ -1,0 +1,16 @@
+.center {
+    margin-right: auto; margin-left: auto; width: 100px;
+  }
+
+  body {background-color: #7BAFD4;
+    margin: 0; padding: 0;
+}
+
+  #circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: red;
+  }
