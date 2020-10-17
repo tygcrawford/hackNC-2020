@@ -4,7 +4,7 @@
   "description": "Family Medical History Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "firebase serve"
   },
   "repository": {
     "type": "git",

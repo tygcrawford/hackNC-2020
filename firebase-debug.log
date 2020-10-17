@@ -1,0 +1,42 @@
+[debug] [2020-10-17T20:10:40.581Z] ----------------------------------------------------------------------
+[debug] [2020-10-17T20:10:40.586Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-10-17T20:10:40.586Z] CLI Version:   8.9.0
+[debug] [2020-10-17T20:10:40.587Z] Platform:      darwin
+[debug] [2020-10-17T20:10:40.587Z] Node Version:  v12.18.3
+[debug] [2020-10-17T20:10:40.603Z] Time:          Sat Oct 17 2020 16:10:40 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-10-17T20:10:40.603Z] ----------------------------------------------------------------------
+[debug] [2020-10-17T20:10:40.603Z] 
+[debug] [2020-10-17T20:10:40.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-17T20:10:40.634Z] > authorizing via signed-in user
+[debug] [2020-10-17T20:10:40.634Z] [iam] checking project hacknc-2020 for permissions ["firebase.projects.get"]
+[debug] [2020-10-17T20:10:40.636Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-17T20:10:40.637Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-17T20:10:40.808Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 17 Oct 2020 20:10:41 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-17T20:10:40.830Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/hacknc-2020:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-10-17T20:10:40.993Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 17 Oct 2020 20:10:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=37","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-17T20:10:40.995Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/hacknc-2020  
+ 
+[debug] [2020-10-17T20:10:41.273Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 17 Oct 2020 20:10:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from '/Users/tycrawford/code/hackNC-2020'...
+[info] 
+[debug] [2020-10-17T20:10:41.282Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/hacknc-2020/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"8\" doesn't match your global version \"12\""}}
+[debug] [2020-10-17T20:10:41.771Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 17 Oct 2020 20:10:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: Watching "/Users/tycrawford/code/hackNC-2020/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/tycrawford/code/hackNC-2020/functions\" for Cloud Functions..."}}
+[debug] [2020-10-17T20:10:41.833Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-10-17T20:10:41.834Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2020-10-17T20:10:41.834Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-10-17T20:10:41.835Z] [worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: Assigning socketPath: /var/folders/y8/cxc5s0g159sbz7nc10gswyrc0000gn/T/fire_emu_53866.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: Assigning socketPath: /var/folders/y8/cxc5s0g159sbz7nc10gswyrc0000gn/T/fire_emu_53866.sock"}}
+[debug] [2020-10-17T20:10:41.836Z] [worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: BUSY"}}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2020-10-17T20:10:42.771Z] [runtime-status] [53866] Functions runtime initialized. {"cwd":"/Users/tycrawford/code/hackNC-2020/functions","node_version":"12.18.3"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [53866] Functions runtime initialized. {\"cwd\":\"/Users/tycrawford/code/hackNC-2020/functions\",\"node_version\":\"12.18.3\"}"}}
+[debug] [2020-10-17T20:10:42.773Z] [runtime-status] [53866] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [53866] Disabled runtime features: undefined"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed. This package is in your package.json, but it's not available. You probably need to run \"npm install\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2020-10-17T20:10:42.812Z] [worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: exited"}}
+[debug] [2020-10-17T20:10:42.813Z] [worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-aaf8a1ed-1b5d-4609-989a-88c58f7f78fe]: FINISHED"}}
