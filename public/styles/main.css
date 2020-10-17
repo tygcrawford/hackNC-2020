@@ -23,6 +23,17 @@
     height: 200px;
     transform: translate(0px, 150px);
 }
+.centerediv3 {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    transform: translate(0px, -200px);
+}
   
   .center2 {
     margin-right: auto;
@@ -63,7 +74,7 @@
   }
   #circle2 {
     width: 200px;
-    height: 50px;
+    height: 40px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
