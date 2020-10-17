@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- link tags -->
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+
+    <!-- script tags-->
+    <script src="scripts/main.js"></script>
+
+    <!-- FIREBASE TAGS-->
+    <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.24.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- Firebase UI -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+    <title>Welcome to Firebase Hosting</title>
+  </head>
+  <body>
+    <div id="firebaseui-auth-container"></div>
+    <!-- FIREBASE SCRIPTS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // The Firebase SDK is initialized and available here!
+
+        // Firebase-UI https://github.com/firebase/firebaseui-web/blob/master/README.md
+            let ui = new firebaseui.auth.AuthUI(firebase.auth());
+            ui.start('#firebaseui-auth-container', {
+                signInOptions: [
+                    {provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    requireDisplayName: false,
+                    }
+                ],
+                signInSuccessUrl: './index.html',
+                callbacks: {
+                    signInSuccessWithAuthResult: async (authResult) => {
+                        // On success redirect to signInSuccessUrl.
+                        console.log(authResult.user);
+                        return true;
+                    }
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
