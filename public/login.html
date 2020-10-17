@@ -20,7 +20,7 @@
     <script defer src="/__/firebase/7.24.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <!-- Firebase UI Library -->
+    <!-- Firebase UI -->
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
@@ -33,13 +33,23 @@
         document.addEventListener('DOMContentLoaded', function() {
         // The Firebase SDK is initialized and available here!
 
-        let ui = new firebaseui.auth.AuthUI(firebase.auth());
-        ui.start('#firebaseui-auth-container', {
-            signInOptions: [
-                {provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                requireDisplayName: false}
-            ]
-        });
+        // Firebase-UI https://github.com/firebase/firebaseui-web/blob/master/README.md
+            let ui = new firebaseui.auth.AuthUI(firebase.auth());
+            ui.start('#firebaseui-auth-container', {
+                signInOptions: [
+                    {provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    requireDisplayName: false,
+                    }
+                ],
+                signInSuccessUrl: './index.html',
+                callbacks: {
+                    signInSuccessWithAuthResult: async (authResult) => {
+                        // On success redirect to signInSuccessUrl.
+                        console.log(authResult.user);
+                        return true;
+                    }
+                }
+            });
         });
     </script>
   </body>
