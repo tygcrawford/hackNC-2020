@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13"
+  },
+  "dependencies": {
+    "bulma": "^0.9.1"
   }
 }

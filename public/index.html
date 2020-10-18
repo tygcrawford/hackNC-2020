@@ -15,38 +15,38 @@
     <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/7.24.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <!-- Firebase UI -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
-    <title>Welcome to Firebase Hosting</title>
+    <title>My Family Medical History</title>
   </head>
   <body>
-    
+    <div id="firebaseui-auth-container"></div>
     <!-- FIREBASE SCRIPTS -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        document.addEventListener('DOMContentLoaded', function() {
+        // The Firebase SDK is initialized and available here!
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+        // Firebase-UI https://github.com/firebase/firebaseui-web/blob/master/README.md
+            let ui = new firebaseui.auth.AuthUI(firebase.auth());
+            ui.start('#firebaseui-auth-container', {
+                signInOptions: [
+                    {provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    requireDisplayName: false,
+                    }
+                ],
+                signInSuccessUrl: './frontend.html',
+                callbacks: {
+                    signInSuccessWithAuthResult: async (authResult) => {
+                        // On success redirect to signInSuccessUrl.
+                        console.log(authResult.user);
+                        return true;
+                    }
+                }
+            });
+        });
     </script>
   </body>
 </html>
