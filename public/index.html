@@ -24,6 +24,8 @@
     <title>My Family Medical History</title>
   </head>
   <body>
+
+
     <a href='./login.html'>Login</a>
     
     <!-- FIREBASE SCRIPTS -->
@@ -201,15 +203,15 @@
     /*An array containing all the country names in the world:*/
     var diseases = ["Breast Cancer", "Lung Disease", "Heart Disease", "Skin Cancer"];    
     /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-    autocomplete(document.getElementById("myInput"), countries);
+    autocomplete(document.getElementById("myInput"), diseases);
     </script>
     
 
-    <form autocomplete="off" action="/action_page.php">
+    <form autocomplete="off" action="/index.html">
       <div class="autocomplete" style="width:400px;">
-        <input id="myInput" type="text" name="myCountry" placeholder="Enter Condition">
+        <input class="searchinput" id="myInput" type="text" name="myCountry" placeholder="Enter Condition">
       </div>
-      <input type="submit">
+      <input id="sinput2" type="submit">
     </form>
 
     <div class="topnav">
@@ -239,6 +241,7 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -255,6 +258,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 </script>
 
 <script>
