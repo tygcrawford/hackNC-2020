@@ -2,6 +2,13 @@
     margin: 0px auto 0px auto;
     padding: 0px 0px 0px 0px
   }
+
+  h6 {
+    
+        font-size: 70px;
+      
+  }
+
 .centerediv {
     position: absolute;
     top:0;
@@ -11,6 +18,7 @@
     margin: auto;
     width: 120px;
     height: 40px;
+    transform: translate(0px, 150px);
 }
 .centerediv2 {
     position: absolute;
@@ -60,25 +68,40 @@
     line-height: 30px; 
   }
 
-  body {background-color: #7BAFD4;
+  body {background-color: #4B9CD3;
     
 }
 
   #circle {
     width: 200px;
-    height: 200px;
+    height: 50px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    background: white;
+    background: #BFDBF7;
+    transform: translate(100px, 200px);
+  }
+  #circle4 {
+    width: 200px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: lightgreen;
+    transform: translate(-100px, 200px);
+
   }
   #circle2 {
-    width: 200px;
-    height: 40px;
+    width: 1300px;
+    height: 600px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    background: white;
+    background: #CFEEFA;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #ff0000;
+    border-width: thick;
   }
   #circle3 {
     width: 150px;
@@ -201,18 +224,18 @@
     position: relative;
     display: inline-block;
   }
-  input {
+  .searchinput {
     border: 1px solid transparent;
     background-color: #f1f1f1;
     padding: 10px;
     font-size: 16px;
     transform: translate(700px, -10px);
   }
-  input[type=text] {
+  .sinput[type=text] {
     background-color: #f1f1f1;
     width: 100%;
   }
-  input[type=submit] {
+  .sinput2[type=submit] {
     background-color: DodgerBlue;
     color: #fff;
   }
@@ -243,3 +266,4 @@
     background-color: DodgerBlue !important;
     color: #ffffff;
   }
+
