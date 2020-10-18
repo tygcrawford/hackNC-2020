@@ -1,3 +1,105 @@
+
+.container {
+    width:140vh;
+    height: 60vh;
+    margin:0 auto;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.headergood {
+    width: 100vh;
+    height: 10vh;
+    font-size: 40px;
+    
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10vh;  
+}
+
+.btn-container {
+    width:50vh;
+    height: 15vh;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.infopage {
+
+    width: 20vh;
+    height: 6vh;
+    font-size: 15px;
+    background-color: limegreen;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+    line-height: 6vh;  
+    cursor: pointer;
+
+}
+
+.btnStyle {
+    width: 30vh;
+    height: 10vh;
+    font-size: 20px;
+    background-color: lightpink;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+    
+}
+
+.btn-login {
+    width: 30vh;
+    height: 10vh;
+    font-size: 20px;
+    background-color: lightgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    vertical-align: middle;
+    line-height: 10vh;
+    cursor: pointer;  
+}
+
+.btn-tree {
+    width: 30vh;
+    height: 10vh;
+    font-size: 20px;
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    vertical-align: middle;
+    line-height: 10vh;  
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
 .center {
     margin: 0px auto 0px auto;
     padding: 0px 0px 0px 0px
@@ -73,6 +175,15 @@
 }
 
   #circle {
+    width: 200px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: #BFDBF7;
+    transform: translate(100px, 200px);
+  }
+  #circle5 {
     width: 200px;
     height: 50px;
     -webkit-border-radius: 100px;
