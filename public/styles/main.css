@@ -36,16 +36,17 @@
 }
 
 .btn-container {
-    width:50vh;
-    height: 15vh;
-    margin:0 auto;
+    width:70vh;
+    height: 10vh;
     display: flex;
+    
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+   
+
 }
 
-.infopage {
+button {
 
     width: 20vh;
     height: 6vh;
@@ -56,19 +57,11 @@
     vertical-align: middle;
     line-height: 6vh;  
     cursor: pointer;
+    
 
 }
 
-.btnStyle {
-    width: 30vh;
-    height: 10vh;
-    font-size: 20px;
-    background-color: lightpink;
-    font-family: 'Catamaran', sans-serif;
-    text-align: center;
-    
-    
-}
+
 
 .btn-login {
     width: 30vh;
@@ -81,6 +74,9 @@
     vertical-align: middle;
     line-height: 10vh;
     cursor: pointer;  
+    -webkit-box-shadow: 14px 10px 39px 0px rgba(0,0,0,0.77);
+    -moz-box-shadow: 14px 10px 39px 0px rgba(0,0,0,0.77);
+    box-shadow: 14px 10px 39px 0px rgba(0,0,0,0.77);
 }
 
 .btn-tree {
@@ -94,16 +90,18 @@
     vertical-align: middle;
     line-height: 10vh;  
     cursor: pointer;
+    -webkit-box-shadow: 14px 10px 39px 0px rgba(0,0,0,0.77);
+    -moz-box-shadow: 14px 10px 39px 0px rgba(0,0,0,0.77);
+    box-shadow: 14px 10px 39px 0px rgba(0,0,0,0.77);
 
 }
 
 .container1 {
     width: 15vh;
-    height: 15;
+    height: 15vh;
     position: relative;
     cursor: pointer;
-    left: 300px;
-    top: 140px;
+    
   
 }
 
@@ -144,12 +142,38 @@
   text-align: center;
 }
 
+/* stuff */
+
+
+a.button8{
+display:inline-block;
+padding:0.2em 1.45em;
+margin:0.1em;
+border:0.15em solid lightskyblue;
+box-sizing: border-box;
+text-decoration:none;
+font-family: 'Catamaran', sans-serif;
+font-weight:400;
+color:#000000;
+background-color: lightskyblue;
+text-align:center;
+position:relative;
 
 
 
-
-
-
+}
+a.button8:hover{
+border-color: black;
+}
+a.button8:active{
+background-color:#999999;
+}
+@media all and (max-width:30em){
+ a.button8{
+display:block;
+margin:0.2em auto;
+ }
+}
 
 .center {
     margin: 0px auto 0px auto;
